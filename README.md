@@ -1,5 +1,7 @@
 # Stable Diffusion WebUI Forge
 
+Ports the uv changes from [sd-webui-forge-classic](https://github.com/Haoming02/sd-webui-forge-classic) by [Haoming](https://github.com/Haoming02).
+
 Stable Diffusion WebUI Forge is a platform on top of [Stable Diffusion WebUI](https://github.com/AUTOMATIC1111/stable-diffusion-webui) (based on [Gradio](https://www.gradio.app/) <a href='https://github.com/gradio-app/gradio'><img src='https://img.shields.io/github/stars/gradio-app/gradio'></a>) to make development easier, optimize resource management, speed up inference, and study experimental features.
 
 The name "Forge" is inspired from "Minecraft Forge". This project is aimed at becoming SD WebUI's Forge.
