@@ -9,6 +9,9 @@ git = launch_utils.git
 index_url = launch_utils.index_url
 dir_repos = launch_utils.dir_repos
 
+if args.uv:
+    from modules_forge import uv_hook  # noqa
+
 commit_hash = launch_utils.commit_hash
 git_tag = launch_utils.git_tag
 

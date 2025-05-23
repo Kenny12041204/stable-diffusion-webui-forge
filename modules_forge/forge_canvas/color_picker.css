@@ -1,0 +1,172 @@
+body {
+    font-family: sans-serif;
+}
+
+#custom-color-picker {
+    position: absolute;
+    display: none; /* Initially hidden */
+    border: 1px solid #ccc;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+    z-index: 1000;
+    width: 280px;
+    padding: 10px;
+    border-radius: 8px;
+}
+
+#color-picker-header {
+    cursor: move;
+    padding: 8px 0;
+    background-color: #eee;
+    color: #333;
+    text-align: center;
+    margin: -10px -10px 10px -10px; /* Extend to padding edges */
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+}
+
+#color-picker-header span {
+    font-weight: bold;
+}
+
+#close-color-picker {
+    position: absolute;
+    top: 5px;
+    right: 10px;
+    background: none;
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: #888;
+}
+
+#close-color-picker:hover {
+    color: #333;
+}
+
+#color-selection-area {
+    width: 250px;
+    height: 200px;
+    background-image: linear-gradient(to top, black, transparent), linear-gradient(to right, white, transparent);
+    position: relative;
+    cursor: crosshair;
+    margin: 0 auto; /* Center the SV pad */
+    border: 1px solid #ddd;
+}
+
+#sv-handle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border: 1px solid white;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 0 1px black, inset 0 0 0 1px black; /* Improves visibility on light/dark colors */
+    pointer-events: none; /* So it doesn't interfere with clicks on the area */
+}
+
+#hue-slider-container {
+    margin: 15px auto;
+    width: 250px;
+}
+
+#hue-slider {
+    width: 100%;
+    cursor: pointer;
+    -webkit-appearance: none;
+    appearance: none;
+    height: 10px;
+    background: linear-gradient(to right, hsl(0, 100%, 50%), hsl(60, 100%, 50%), hsl(120, 100%, 50%), hsl(180, 100%, 50%), hsl(240, 100%, 50%), hsl(300, 100%, 50%), hsl(360, 100%, 50%));
+    border-radius: 5px;
+    outline: none;
+}
+
+#hue-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+#hue-slider::-moz-range-thumb {
+    width: 16px;
+    height: 16px;
+    background: #fff;
+    border-radius: 50%;
+    border: 2px solid #ccc;
+    box-shadow: 0 0 2px rgba(0,0,0,0.2);
+}
+
+#color-preview {
+    width: 50px;
+    height: 50px;
+    border: 1px solid #ccc;
+    background-color: #fff; /* Default, will be updated by JS */
+    margin: 10px auto;
+    border-radius: 4px;
+}
+
+#color-value-inputs {
+    margin-top: 10px;
+}
+
+#color-value-inputs select,
+#color-value-inputs input {
+    width: calc(33% - 10px); /* Adjust for spacing */
+    padding: 6px;
+    margin: 5px 2px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 12px;
+}
+#color-value-inputs label {
+    font-size: 12px;
+    margin-right: 2px;
+}
+
+#color-value-inputs #color-mode-selector {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+
+#rgb-inputs, #hsv-inputs, #hex-input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 5px;
+}
+#rgb-inputs input, #hsv-inputs input{
+    width: 45px; /* Smaller width for individual inputs */
+}
+
+#hex-input input {
+    width: calc(100% - 40px); /* Label takes up some space */
+}
+
+
+#eyedropper-button {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    background-color: #e7e7e7;
+    color: #333;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+#eyedropper-button:hover {
+    background-color: #ddd;
+}
+
+.hidden {
+    display: none !important;
+}
